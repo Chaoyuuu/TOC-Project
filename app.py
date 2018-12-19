@@ -7,7 +7,7 @@ machine = TocMachine(
     states=[
         'user',
         'help',
-        'find course',
+        'course',
         'talk',
         'classroom',
         'state4',
@@ -26,7 +26,7 @@ machine = TocMachine(
         {
             'trigger': 'advance',
             'source': 'help',
-            'dest': 'find course',
+            'dest': 'course',
             'conditions': 'is_going_to_state1'
         },
         {
@@ -49,7 +49,7 @@ machine = TocMachine(
         },
         {
             'trigger': 'go_4',
-            'source': 'find course',
+            'source': 'course',
             'dest': 'state4',
             'conditions': 'is_going_to_state4'
         },
@@ -118,7 +118,7 @@ def webhook_handler():
 
     if body['object'] == "page":
         event = body['entry'][0]['messaging'][0]
-        if machine.state == "find course":
+        if machine.state == "course":
             machine.go_4(event)
             return 'OK'
         elif machine.state == "state4":

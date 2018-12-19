@@ -1,43 +1,34 @@
 # TOC Project 2019
 
-Template Code for TOC Project 2019
-
 A Facebook messenger bot based on a finite state machine
-///give me something !!!
 
-## Setup
+### Chat Box 功能:
+* 成大課程查詢
+* NCKU CSIE 借教室 
+* 模仿你講話
 
-### Prerequisite
+## Quickstart
+### 成大課程查詢
+1. 輸入"小幫手"，選擇"課程查詢"按鈕
+2. 輸入想要查詢的系所代號
+3. 輸入想要查詢的課程代碼
+4. 回傳搜尋結果(餘額/課程連結)
+5. 如果還有餘額，會再回傳成大選課系統的連結
+
+### NCKU CSIE 借教室 
+1. 輸入"小幫手"，選擇"教室查詢"按鈕
+2. 輸入想要查詢的日期
+3. 輸入想要查詢的時段
+4. 回傳搜尋的結果(可以使用的教室/系館借教室的連結)
+
+### 模仿你講話
+1. 你輸入的對話，回傳給你
+
+### Setup
 * Python 3
 * Facebook Page and App
 * HTTPS Server
 * Beautifulsoup
 
-####  Hoe to Run 
-open two terminal
-```sh
-./ngrok http 5000 	#Run Locally
-```
-```sh
-python3 app.py      #Run the sever
-```
-
-
-## Finite State Machine
+## FSM Graph
 ![fsm](./img/fsm.png)
-
-## Usage
-The initial state is set to `user`.
-
-Every time `user` state is triggered to `advance` to another state, it will `go_back` to `user` state after the bot replies corresponding message.
-
-* user
-	* Input: "go to state1"
-		* Reply: "I'm entering state1"
-
-	* Input: "go to state2"
-		* Reply: "I'm entering state2"
-
-
-## Reference
-[TOC-Project-2017](https://github.com/Lee-W/TOC-Project-2017) ❤️ [@Lee-W](https://github.com/Lee-W)
