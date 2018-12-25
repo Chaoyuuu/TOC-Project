@@ -14,6 +14,7 @@ A Facebook messenger bot based on a finite state machine
 3. 輸入想要查詢的課程代碼
 4. 回傳搜尋結果(餘額/課程連結)
 5. 如果還有餘額，會再回傳成大選課系統的連結
+<img src="./img/course.jpg" width="60%"/>
 ![課程查詢](./img/course.jpg)
 
 ### NCKU CSIE 借教室 
