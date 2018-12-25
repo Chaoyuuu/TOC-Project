@@ -34,4 +34,4 @@ A Facebook messenger bot based on a finite state machine
 * Beautifulsoup
 
 ## FSM Graph
-![fsm](./img/fsm.png)
+![FSM](./img/fsm.png)
